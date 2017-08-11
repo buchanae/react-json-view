@@ -18,6 +18,14 @@ import {Edit, CheckCircle, RemoveCircle as Remove} from './icons';
 import Theme from './../themes/getStyle';
 import Radium from 'radium';
 
+
+//icons
+import {
+    Columns, SearchPlus, SearchMinus
+} from './icons';
+import ReactTooltip from 'react-tooltip'
+
+
 @Radium
 class VariableEditor extends React.Component {
 
@@ -74,6 +82,37 @@ class VariableEditor extends React.Component {
             </div>
             {onEdit !== false && editMode == false ? this.getEditIcon() : null}
             {onDelete !== false && editMode == false ? this.getRemoveIcon() : null}
+            <SearchPlus data-tip data-for='SearchPlus'
+                        onClick={ () => {
+                          this.props.callback({
+                              name: 'FILTER_FOR_VALUE',
+                              variable: variable
+                          });
+                        } } />
+            <SearchMinus data-tip data-for='SearchMinus'
+                         onClick={ () => {
+                           this.props.callback({
+                               name: 'FILTER_OUT_VALUE',
+                               variable: variable
+                           });
+                         } } />
+            <Columns data-tip data-for='Columns'
+                     onClick={ () => {
+                       this.props.callback({
+                           name: 'TOGGLE_IN_TABLE',
+                           variable: variable
+                       });
+                     } } />
+            <ReactTooltip id='Columns' type="info">
+              <span>Toggle column in table</span>
+            </ReactTooltip>
+            <ReactTooltip id='SearchMinus' type="info">
+              <span>Filter out value</span>
+            </ReactTooltip>
+            <ReactTooltip id='SearchPlus' type="info">
+              <span>Filter for value</span>
+            </ReactTooltip>
+
         </div>
         );
 

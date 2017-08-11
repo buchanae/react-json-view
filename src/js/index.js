@@ -50,7 +50,8 @@ export default class extends React.Component {
         onAdd: false,
         iconStyle: "triangle",
         style: {},
-        validationMessage: "Validation Error"
+        validationMessage: "Validation Error",
+        callback: null
     }
 
     getListeners = () => {

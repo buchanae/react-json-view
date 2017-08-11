@@ -223,6 +223,70 @@ export class Edit extends React.Component {
     }
 }
 
+export class Columns extends React.Component {
+    render() {
+        const {props} = this;
+        const {style, ...rest} = props;
+
+        return (
+            <span {...rest}>
+            <svg {...getIconStyle(style)}
+            viewBox="0 0 40 40"
+            fill="currentColor"
+            preserveAspectRatio="xMidYMid meet"
+            >
+            <g>
+                <path d='M3 20.6h8.1V5.1H2.6v15q0 .2.1.3t.3.2zm18.4-.5v-15h-8.5v15.5H21q.2 0 .3-.2t.1-.3zm1.7-16.2v16.2q0 .9-.6 1.6t-1.5.6H3q-.9 0-1.5-.6t-.6-1.6V3.9q0-.9.6-1.6T3 1.7h18q.9 0 1.5.6t.6 1.6z' />
+            </g>
+            </svg>
+            </span>
+        );
+    }
+}
+
+export class SearchPlus extends React.Component {
+    render() {
+        const {props} = this;
+        const {style, ...rest} = props;
+
+        return (
+            <span {...rest}>
+            <svg {...getIconStyle(style)}
+            viewBox="0 0 40 40"
+            fill="currentColor"
+            preserveAspectRatio="xMidYMid meet"
+            >
+            <g>
+                <path d='M14.6 10.7v.9q0 .1-.2.3t-.3.1h-3v3q0 .2-.1.3t-.3.1h-.8q-.2 0-.3-.1t-.2-.3v-3h-3q-.1 0-.3-.1t-.1-.3v-.9q0-.2.1-.3t.3-.1h3v-3q0-.2.2-.3t.3-.1h.8q.2 0 .3.1t.1.3v3h3q.2 0 .3.1t.2.3zm1.7.4q0-2.4-1.8-4.2t-4.2-1.8T6 6.9t-1.7 4.2T6 15.4t4.3 1.7 4.2-1.7 1.8-4.3zm6.8 11.2q0 .7-.5 1.2t-1.2.5q-.7 0-1.2-.5l-4.6-4.6q-2.4 1.7-5.3 1.7-1.9 0-3.7-.8t-3-2-2-3-.7-3.7.7-3.6 2-3 3-2 3.7-.8 3.6.8 3.1 2 2 3 .7 3.6q0 3-1.6 5.4l4.5 4.6q.5.5.5 1.2z' />
+            </g>
+            </svg>
+            </span>
+        );
+    }
+}
+
+
+export class SearchMinus extends React.Component {
+    render() {
+        const {props} = this;
+        const {style, ...rest} = props;
+
+        return (
+            <span {...rest}>
+            <svg {...getIconStyle(style)}
+            viewBox="0 0 40 40"
+            fill="currentColor"
+            preserveAspectRatio="xMidYMid meet"
+            >
+            <g>
+                <path d='M14.6 10.7v.9q0 .1-.2.3t-.3.1H6.4q-.1 0-.3-.1t-.1-.3v-.9q0-.2.1-.3t.3-.1h7.7q.2 0 .3.1t.2.3zm1.7.4q0-2.4-1.8-4.2t-4.2-1.8T6 6.9t-1.7 4.2T6 15.4t4.3 1.7 4.2-1.7 1.8-4.3zm6.8 11.2q0 .7-.5 1.2t-1.2.5q-.7 0-1.2-.5l-4.6-4.6q-2.4 1.7-5.3 1.7-1.9 0-3.7-.8t-3-2-2-3-.7-3.7.7-3.6 2-3 3-2 3.7-.8 3.6.8 3.1 2 2 3 .7 3.6q0 3-1.6 5.4l4.5 4.6q.5.5.5 1.2z' />
+            </g>
+            </svg>
+            </span>
+        );
+    }
+}
+
 export class CheckCircle extends React.Component {
     render() {
         const {props} = this;

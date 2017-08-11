@@ -1,7 +1,7 @@
 {
-  "name": "react-json-view",
+  "name": "react-json-view-callback",
   "description": "Interactive react component for displaying javascript arrays and JSON objects.",
-  "version": "1.11.8",
+  "version": "1.11.9",
   "main": "dist/main.js",
   "files": [
     "dist/"
@@ -9,8 +9,9 @@
   "dependencies": {
     "clipboard": "^1.6.1",
     "flux": "^3.1.2",
-    "radium":"^0.19.1",
-    "react-base16-styling": "^0.5.3"
+    "radium": "^0.19.1",
+    "react-base16-styling": "^0.5.3",
+    "react-tooltip": "^3.3.0"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
@@ -65,29 +66,28 @@
     "type": "git",
     "url": "https://github.com/mac-s-g/react-json-view.git"
   },
-   "keywords": [
-     "array-viewer",
-     "base-16",
-     "component",
-     "interactive",
-     "interactive-json",
-     "json",
-     "json-component",
-     "json-display",
-     "json-tree",
-     "json-view",
-     "json-viewer",
-     "json-inspector",
-     "json-tree",
-     "react",
-     "react-component",
-     "react-json",
-     "theme",
-     "tree",
-     "tree-view",
-     "treeview"
-   ],
-
+  "keywords": [
+    "array-viewer",
+    "base-16",
+    "component",
+    "interactive",
+    "interactive-json",
+    "json",
+    "json-component",
+    "json-display",
+    "json-tree",
+    "json-view",
+    "json-viewer",
+    "json-inspector",
+    "json-tree",
+    "react",
+    "react-component",
+    "react-json",
+    "theme",
+    "tree",
+    "tree-view",
+    "treeview"
+  ],
   "license": "MIT",
   "author": "Mac Gainor",
   "bugs": {
