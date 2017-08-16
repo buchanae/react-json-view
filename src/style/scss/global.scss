@@ -13,6 +13,10 @@
         display: none;
     }
 
+    .click-to-callback {
+        display: none;
+    }
+
     .object-key-val {
         &:hover > span > .object-meta-data {
             & > .copy-to-clipboard-container {
@@ -22,6 +26,9 @@
                 display: inline-block;
             }
             & > .click-to-remove {
+                display: inline-block;
+            }
+            & > .click-to-callback {
                 display: inline-block;
             }
 
@@ -35,6 +42,10 @@
         &:hover .click-to-edit {
             display: inline-block;
         }
+        &:hover .click-to-callback {
+            display: inline-block;
+        }
+
     }
 
 }

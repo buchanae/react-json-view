@@ -1,7 +1,7 @@
 {
   "name": "react-json-view-callback",
   "description": "Interactive react component for displaying javascript arrays and JSON objects.",
-  "version": "1.11.9",
+  "version": "1.11.10",
   "main": "dist/main.js",
   "files": [
     "dist/"

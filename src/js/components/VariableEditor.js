@@ -35,7 +35,8 @@ class VariableEditor extends React.Component {
         parsedInput: {
             type: false,
             value: null
-        }
+        },
+        isHover: true
     }
 
     constructor(props) {
@@ -47,7 +48,8 @@ class VariableEditor extends React.Component {
             variable, singleIndent, type, theme,
             namespace, indentWidth, onEdit, onDelete
         } = this.props;
-        const {editMode} = this.state;
+
+        const {editMode,isHover} = this.state;
 
         return (
         <div {...Theme(
@@ -82,36 +84,46 @@ class VariableEditor extends React.Component {
             </div>
             {onEdit !== false && editMode == false ? this.getEditIcon() : null}
             {onDelete !== false && editMode == false ? this.getRemoveIcon() : null}
-            <SearchPlus data-tip data-for='SearchPlus'
-                        onClick={ () => {
-                          this.props.callback({
-                              name: 'FILTER_FOR_VALUE',
-                              variable: variable
-                          });
-                        } } />
-            <SearchMinus data-tip data-for='SearchMinus'
-                         onClick={ () => {
-                           this.props.callback({
-                               name: 'FILTER_OUT_VALUE',
-                               variable: variable
-                           });
-                         } } />
-            <Columns data-tip data-for='Columns'
-                     onClick={ () => {
-                       this.props.callback({
-                           name: 'TOGGLE_IN_TABLE',
-                           variable: variable
-                       });
-                     } } />
-            <ReactTooltip id='Columns' type="info">
-              <span>Toggle column in table</span>
-            </ReactTooltip>
-            <ReactTooltip id='SearchMinus' type="info">
-              <span>Filter out value</span>
-            </ReactTooltip>
-            <ReactTooltip id='SearchPlus' type="info">
-              <span>Filter for value</span>
-            </ReactTooltip>
+
+            <div class="click-to-callback"  >
+              <SearchPlus data-tip data-for='SearchPlus'
+                          class="click-to-callback-icon"
+                          {...Theme(theme, 'copy-icon')}
+                          onClick={ () => {
+                            this.props.callback({
+                                name: 'FILTER_FOR_VALUE',
+                                variable: variable
+                            });
+                          } } />
+              <SearchMinus data-tip data-for='SearchMinus'
+                           class="click-to-callback-icon"
+                           {...Theme(theme, 'copy-icon')}
+                           onClick={ () => {
+                             this.props.callback({
+                                 name: 'FILTER_OUT_VALUE',
+                                 variable: variable
+                             });
+                           } } />
+              <Columns data-tip data-for='Columns'
+                       class="click-to-callback-icon"
+                       {...Theme(theme, 'copy-icon')}
+                       onClick={ () => {
+                         this.props.callback({
+                             name: 'TOGGLE_IN_TABLE',
+                             variable: variable
+                         });
+                       } } />
+              <ReactTooltip id='Columns' type="info">
+                <span>Toggle column in table</span>
+              </ReactTooltip>
+              <ReactTooltip id='SearchMinus' type="info">
+                <span>Filter out value</span>
+              </ReactTooltip>
+              <ReactTooltip id='SearchPlus' type="info">
+                <span>Filter for value</span>
+              </ReactTooltip>
+
+            </div>
 
         </div>
         );
