@@ -179,21 +179,7 @@ export default class extends React.Component {
 
     render = () => {
         const {theme, onDelete, onAdd} = this.props;
-        return (
-        <div {...Theme(theme, 'object-meta-data')}
-        class='object-meta-data'
-        onClick={(e)=>{
-            e.stopPropagation();
-        }}>
-            {/* size badge display */}
-            {this.getObjectSize()}
-            {/* copy to clipboard icon */}
-            {this.getCopyComponent()}
-            {/* copy add/remove icons */}
-            {onAdd !== false ? this.getAddAttribute() : null}
-            {onDelete !== false ? this.getRemoveObject() : null}
-        </div>
-        );
+        return (<div></div>);
     }
 
 }

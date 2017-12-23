@@ -29,7 +29,7 @@ export default class extends React.Component {
         displayObjectSize: true,
         enableClipboard: true,
         indentWidth: 4,
-        displayDataTypes: true,
+        displayDataTypes: false,
         iconStyle: "triangle"
     }
 

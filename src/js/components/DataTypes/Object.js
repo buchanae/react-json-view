@@ -140,9 +140,6 @@ class rjvObject extends React.Component {
                         <IconComponent {...{theme, iconStyle}}/>
                     </div>
                     <ObjectName {...this.props} />
-                    <span {...Theme(theme, 'brace')}>
-                        {object_type == 'array' ? '[' : '{'}
-                    </span>
                 </span>
                 {expanded ? this.getObjectMetaData(src) : null}
             </span>
@@ -181,12 +178,6 @@ class rjvObject extends React.Component {
                     : this.getEllipsis()
                 }
                 <span class="brace-row">
-                    <span style={{
-                        ...Theme(theme, 'brace').style,
-                        paddingLeft:(expanded ? '3px' : '0px')
-                    }} >
-                        {object_type == 'array' ? ']' : '}'}
-                    </span>
                     {expanded ? null : this.getObjectMetaData(src)}
                 </span>
             </div>

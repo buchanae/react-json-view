@@ -11,7 +11,6 @@ export default class extends React.Component {
         const {props} = this;
         return (
         <div {...Theme(props.theme, 'integer')}>
-            <DataTypeLabel type_name={type_name} {...props} />
             {this.props.value}
         </div>
         );

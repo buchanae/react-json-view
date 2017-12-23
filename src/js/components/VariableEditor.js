@@ -64,13 +64,10 @@ class VariableEditor extends React.Component {
                 key={variable.name}
             >
                 {type == "array" ? (
-                    <span
-                        {...Theme(theme, "array-key")}
+                    <span 
+                        className="array-key"
                         key={variable.name + "_" + namespace}
-                    >
-                        {variable.name}
-                        <div {...Theme(theme, "colon")}>:</div>
-                    </span>
+                    >- </span>
                 ) : (
                     <span>
                         <span
@@ -78,11 +75,9 @@ class VariableEditor extends React.Component {
                             class="object-key"
                             key={variable.name + "_" + namespace}
                         >
-                            <span style={{ verticalAlign: "top" }}>"</span>
                             <span style={{ display: "inline-block" }}>
                                 {variable.name}
                             </span>
-                            <span style={{ verticalAlign: "top" }}>"</span>
                         </span>
                         <span {...Theme(theme, "colon")}>:</span>
                     </span>
@@ -111,12 +106,6 @@ class VariableEditor extends React.Component {
                 >
                     {this.getValue(variable, this.props, editMode)}
                 </div>
-                {onEdit !== false && editMode == false
-                    ? this.getEditIcon()
-                    : null}
-                {onDelete !== false && editMode == false
-                    ? this.getRemoveIcon()
-                    : null}
             </div>
         )
     }
@@ -196,7 +185,7 @@ class VariableEditor extends React.Component {
             case "string":
                 return <JsonString value={variable.value} {...props} />
             case "integer":
-                return <JsonInteger value={variable.value} {...props} />
+                return <JsonFloat value={variable.value} {...props} />
             case "float":
                 return <JsonFloat value={variable.value} {...props} />
             case "boolean":
@@ -401,7 +390,7 @@ class VariableEditor extends React.Component {
                 case "string":
                     return <JsonString value={value} {...props} />
                 case "integer":
-                    return <JsonInteger value={value} {...props} />
+                    return <JsonFloat value={value} {...props} />
                 case "float":
                     return <JsonFloat value={value} {...props} />
                 case "boolean":

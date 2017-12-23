@@ -228,7 +228,8 @@ const getDefaultThemeStyling = theme => {
         },
         'icon-container': {
             display: 'inline-block',
-            width: constants.iconContainerWidth
+            width: constants.iconContainerWidth,
+            fontSize: "9px"
         },
         'tooltip': {
             padding: constants.tooltipPadding

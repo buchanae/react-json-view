@@ -19,7 +19,6 @@ export default class extends React.Component {
         };
         return (
         <div {...Theme(props.theme, 'date')}>
-            <DataTypeLabel type_name={type_name} {...props} />
             <span class="date-value" {...Theme(props.theme, 'date-value')}>
             {props.value.toLocaleTimeString(
                 'en-us', display_options

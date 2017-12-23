@@ -1,9 +1,8 @@
 import React from "react";
-import Theme from './../themes/getStyle';
 
-export default function getObjectName(props) {
+export default function ObjectName(props) {
     const {
-        parent_type, namespace, theme, jsvRoot, name
+        parent_type, namespace, jsvRoot, name
     } = props;
 
     const display_name = props.name ? props.name : '';
@@ -12,20 +11,15 @@ export default function getObjectName(props) {
         return (<span />);
     } else if (parent_type == 'array') {
         return (
-            <span {...Theme(theme, 'array-key')} key={namespace}>
-                <span class="array-key">{display_name}</span>
-                <span {...Theme(theme, 'colon')}>:</span>
-            </span>
+            <span className="array-key" key={namespace}></span>
         );
     } else {
         return (
-            <span {...Theme(theme, 'object-name')} key={namespace}>
-                <span class="object-key">
-                    <span style={{verticalAlign:'top'}}>"</span>
+            <span className="object-name" key={namespace}>
+                <span className="object-key">
                     <span>{display_name}</span>
-                    <span style={{verticalAlign:'top'}}>"</span>
                 </span>
-                <span {...Theme(theme, 'colon')}>:</span>
+                <span className="colon">:</span>
             </span>
         );
     }
